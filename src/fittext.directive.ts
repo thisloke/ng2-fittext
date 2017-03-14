@@ -14,8 +14,8 @@ export class FittextDirective implements AfterViewInit {
   constructor(public el: ElementRef, public renderer: Renderer) {
   }
 
-  checkOverflowX(parent:any, children:any) {
-    return children.clientHeight > parent.clientHeight;
+  checkOverflow(parent:any, children:any) {
+    return (children.clientHeight > parent.clientHeight || children.scrollWidth > parent.clientWidth);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -32,8 +32,11 @@ export class FittextDirective implements AfterViewInit {
         this.fontSize = this.container.clientWidth;
         this.el.nativeElement.style.setProperty('font-size', (this.fontSize).toString()+'px');
       }
-      let overflow = this.checkOverflowX(this.container, this.el.nativeElement);
+      let overflow = this.checkOverflow(this.container, this.el.nativeElement);
       if(overflow) {
+        if(this.fontSize < 2) {
+          return;
+        }
         this.fontSize = Math.floor(this.fontSize/this.speed);
         this.el.nativeElement.style.setProperty('font-size', (this.fontSize).toString()+'px');
         this.ngAfterViewInit();

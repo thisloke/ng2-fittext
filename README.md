@@ -70,7 +70,6 @@ For sure is not a good implementation, maybe is not the best way to do it, but, 
 ### Todos
 
  - Write tests
- - Resolve the problem with long word checking the overflowY
  - Find a better algorithm to find the font-size who fits better the container
 
 License
