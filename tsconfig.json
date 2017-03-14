@@ -13,6 +13,7 @@
   },
   "files": [
     "ng2-fittext.ts",
-    "ng2-fittext.d.ts"
+    "ng2-fittext.d.ts",
+    "index.ts"
   ]
 }

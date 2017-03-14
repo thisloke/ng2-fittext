@@ -34,7 +34,7 @@ Import it in your Angular2 project like a directive
     @Component({
       selector: 'label',
       template: `<div #container>
-                    <div fittext [onResize]="true" [container]="#container">Bla bla bla...</div>
+                    <div [fittext]="true" [onResize]="true" [container]="container">Bla bla bla...</div>
                 </div>`
     })
     
@@ -46,7 +46,7 @@ Import it in your Angular2 project like a directive
     
   | Parameter | Description | Values |
   | --- | --- | --- |
-  | fittext | is the selector of the directive | true/false (if is setted is true by default)
+  | fittext | is the selector of the directive | true/false
   | container | the container to fit | ElementRef
   | onResize | enable/disable the autofit in case of window resize | true or false (default false)
 
