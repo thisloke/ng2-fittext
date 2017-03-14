@@ -46,9 +46,9 @@ Import it in your Angular2 project like a directive
     
   | Parameter | Description | Values |
   | --- | --- | --- |
-    | fittext | is the selector of the directive | true/false (if is setted is true by default)
-    | container | the container to fit | ElementRef
-    | onResize | enable/disable the autofit in case of window resize | true or false (default false)
+  | fittext | is the selector of the directive | true/false (if is setted is true by default)
+  | container | the container to fit | ElementRef
+  | onResize | enable/disable the autofit in case of window resize | true or false (default false)
 
 
 
