@@ -2,6 +2,10 @@
 
 An Angular2 directive written in pure typescript (and without jquery!), inspired from http://fittextjs.com/, for autoscale the font size of an element to fit an upper level container.
 
+### Demo
+
+http://plnkr.co/edit/v0TQaYepV4E2Heur02j5?p=preview
+
 ### Installation
 
 Install the library
