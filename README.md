@@ -1,6 +1,6 @@
 # ng2-fittext
 
-An Angular2 directive written in pure typescript (and without jquery!), inspired from http://fittextjs.com/, for autoscale the font size of an element to fit an upper level container.
+An Angular2 directive written in pure typescript (and without jquery!), for autoscale the font size of an element to fit an upper level container.
 
 How many times your font doesn't scale automatically to fit the size of the container? Always, if you don't say it to do that!
 How you can say it? ng2-fittext!
@@ -70,7 +70,8 @@ For sure is not a good implementation, maybe is not the best way to do it, but, 
 ### Todos
 
  - Write tests
- - Find a better algorithm to find the font-size who fits better the container.
+ - Resolve the problem with long word checking the overflowY
+ - Find a better algorithm to find the font-size who fits better the container
 
 License
 ----
