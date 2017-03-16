@@ -3,11 +3,11 @@ import {Directive, ElementRef, Renderer, Input, AfterViewInit, HostListener} fro
 @Directive({
   selector: '[fittext]'
 })
-export class FittextDirective implements AfterViewInit {
+export class Ng2FittextDirective implements AfterViewInit {
 
   @Input('fittext') fittext: any;
   @Input('container') container: any;
-  @Input('onResize') activateOnResize: boolean;
+  @Input('activateOnResize') activateOnResize: boolean;
   public fontSize:number = 0;
   public speed:number = 1.05;
 

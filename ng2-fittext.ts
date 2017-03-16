@@ -1,1 +1,0 @@
-export {FittextDirective} from './src/fittext.directive';

@@ -18,17 +18,14 @@ $ npm install --save ng2-fittext
 
 ### Usage
 
-Import it in your Angular2 project like a directive
+Import it in your Angular2 project like a module
 
 1) Declare it in your module
     ```sh
-    import {FittextDirective} from "ng2-fittext/ng2-fittext";
+    import {Ng2FittextModule} from "ng2-fittext/ng2-fittext";
     @NgModule({
       imports: [
-        ...
-      ],
-      declarations: [
-        FittextDirective
+        Ng2FittextModule
       ]
     })
     
@@ -41,7 +38,7 @@ Import it in your Angular2 project like a directive
     @Component({
       selector: 'label',
       template: `<div #container>
-                    <div [fittext]="true" [onResize]="true" [container]="container">Bla bla bla...</div>
+                    <div [fittext]="true" [activateOnResize]="true" [container]="container">Bla bla bla...</div>
                 </div>`
     })
     
@@ -55,7 +52,7 @@ Import it in your Angular2 project like a directive
   | --- | --- | --- |
   | fittext | is the selector of the directive | true/false
   | container | the container to fit | ElementRef
-  | onResize | enable/disable the autofit in case of window resize | true or false (default false)
+  | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
 
 
 
