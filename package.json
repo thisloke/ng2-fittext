@@ -1,6 +1,6 @@
 {
   "name": "ng2-fittext",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "An Angular2 directive for autoscale the font size of an element to fit an upper level container.",
   "main": "index.js",
   "scripts": {
@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/lokenxo/ng2-fittext#readme",
   "dependencies": {
-    "@angular/core": "^2.4.0"
+    "@angular/core": "^4.0.1"
   },
   "devDependencies": {
-    "typescript": "~2.0.0"
+    "typescript": "~2.2.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
