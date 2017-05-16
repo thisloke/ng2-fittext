@@ -22,7 +22,7 @@ Import it in your Angular2 project like a module
 
 1) Declare it in your module
     ```sh
-    import {Ng2FittextModule} from "ng2-fittext/ng2-fittext";
+    import {Ng2FittextModule} from "ng2-fittext/ng2fittext";
     @NgModule({
       imports: [
         Ng2FittextModule
