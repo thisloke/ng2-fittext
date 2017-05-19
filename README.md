@@ -31,7 +31,7 @@ Import it in your Angular2 project like a module
     
     ```
     
-1) Use it in your components
+2) Use it in your components
     ```sh
    import {Component} from '@angular/core';
    
@@ -43,7 +43,21 @@ Import it in your Angular2 project like a module
     })
     
     export class LabelComponent {}
+    ```
 
+    **NEW! Support for autoresize input box!**
+
+    ```sh
+   import {Component} from '@angular/core';
+   
+    @Component({
+      selector: 'inputbox',
+      template: `<div #container>
+                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [container]="container">`,
+                </div>`
+    })
+    
+    export class InputBoxComponent {}
     ```
 
    Parameters:
@@ -53,7 +67,7 @@ Import it in your Angular2 project like a module
   | fittext | is the selector of the directive | true/false
   | container | the container to fit | ElementRef
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
-
+  | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
 
 
 ### Development
