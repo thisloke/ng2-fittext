@@ -8,15 +8,16 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
   @Input('fittext') fittext: any;
   @Input('container') container: any;
   @Input('activateOnResize') activateOnResize: boolean;
+  @Input('activateOnInputEvents') activateOnInputEvents: boolean;
   private fontSize: number = 0;
   private speed: number = 1.05;
 
   constructor(public el: ElementRef, public renderer: Renderer) {
   }
-  
+
   setFontSize(fontSize) {
-      this.fontSize = fontSize;
-      return this.el.nativeElement.style.setProperty('font-size', (fontSize).toString()+'px');
+    this.fontSize = fontSize;
+    return this.el.nativeElement.style.setProperty('font-size', (fontSize).toString()+'px');
   }
 
   calculateFontSize(fontSize, speed){
@@ -35,6 +36,14 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
     if(this.activateOnResize && this.fittext) {
       this.setFontSize(this.container.clientWidth);
       this.ngAfterViewInit();
+    }
+  }
+
+  @HostListener('input', ['$event'])
+  onInputEvents() {
+    if(this.activateOnInputEvents && this.fittext) {
+        this.setFontSize(this.container.clientHeight);
+        this.ngAfterViewInit();
     }
   }
 
