@@ -49,8 +49,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
 
   ngOnInit() {
     if (this.fittext) {
-      this.setFontSize(this.container.clientWidth);
-      this.el.nativeElement.style.setProperty('will-change', 'content');
+      if(this.activateOnInputEvents) {
+        this.setFontSize(this.container.clientHeight);
+      } else {
+        this.setFontSize(this.container.clientWidth);
+        this.el.nativeElement.style.setProperty('will-change', 'content');
     }
   }
 
