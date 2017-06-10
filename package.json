@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/lokenxo/ng2-fittext#readme",
   "peerDependencies": {
-    "@angular/core": "^4.0.1",
+    "@angular/core": ">=4.0.1",
     "rxjs": "^5.4.0"
   },
   "devDependencies": {
