@@ -1,6 +1,6 @@
 {
   "name": "ng2-fittext",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "An Angular2 directive for autoscale the font size of an element to fit an upper level container.",
   "main": "index.js",
   "scripts": {
