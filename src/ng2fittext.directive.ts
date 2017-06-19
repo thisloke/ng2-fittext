@@ -57,7 +57,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
 
   ngOnInit() {
     if (this.useMaxFontSize) {
-      this.maxFontSize = parseInt(window.getComputedStyle(this.el.nativeElement).fontSize, null);
+      this.maxFontSize = parseInt(window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement).fontSize, null);
     }
 
     if (this.fittext) {
@@ -77,7 +77,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
       } else {
         if (this.useMaxFontSize) {
           if(this.fontSize > this.maxFontSize) {
-              this.maxFontSize = parseInt(window.getComputedStyle(this.el.nativeElement).fontSize, null);
+              this.maxFontSize = parseInt(window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement).fontSize, null);
               this.setFontSize(this.maxFontSize);
           }
         }
