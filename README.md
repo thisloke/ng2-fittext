@@ -28,20 +28,20 @@ Import it in your Angular2 project like a module
         Ng2FittextModule
       ]
     })
-    
+
     ```
-    
+
 2) Use it in your components
     ```sh
    import {Component} from '@angular/core';
-   
+
     @Component({
       selector: 'label',
-      template: `<div #container>
-                    <div [fittext]="true" [activateOnResize]="true" [container]="container">Bla bla bla...</div>
+      template: `<div>
+                    <div [fittext]="true" [activateOnResize]="true">Bla bla bla...</div>
                 </div>`
     })
-    
+
     export class LabelComponent {}
     ```
 
@@ -49,23 +49,22 @@ Import it in your Angular2 project like a module
 
     ```sh
    import {Component} from '@angular/core';
-   
+
     @Component({
       selector: 'inputbox',
-      template: `<div #container>
-                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [container]="container">`,
+      template: `<div>
+                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true">`,
                 </div>`
     })
-    
+
     export class InputBoxComponent {}
     ```
 
    Parameters:
-    
+
   | Parameter | Description | Values |
   | --- | --- | --- |
   | fittext | is the selector of the directive | true/false
-  | container | the container to fit | ElementRef
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
   | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
 
@@ -90,4 +89,4 @@ ISC
 
 
 **Lorenzo I.**
-  
+
