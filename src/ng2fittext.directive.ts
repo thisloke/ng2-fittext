@@ -8,6 +8,8 @@ export class FittextDirective implements AfterViewInit, OnInit {
   @Input('fittext') fittext: any;
   @Input('activateOnResize') activateOnResize: boolean;
   @Input('activateOnInputEvents') activateOnInputEvents: boolean;
+  @Input('useMaxFontSize') useMaxFontSize: boolean;
+  private maxFontSize: number = 1000;
   private fontSize: number = 0;
   private speed: number = 1.05;
 
@@ -15,6 +17,8 @@ export class FittextDirective implements AfterViewInit, OnInit {
   }
 
   setFontSize(fontSize) {
+    console.log();
+
     this.fontSize = fontSize;
     return this.el.nativeElement.style.setProperty('font-size', (fontSize).toString() + 'px');
   }
@@ -37,7 +41,7 @@ export class FittextDirective implements AfterViewInit, OnInit {
     if (this.activateOnResize && this.fittext) {
       if (this.activateOnInputEvents && this.fittext) {
           this.setFontSize(this.el.nativeElement.parentElement.clientHeight);
-      } else{
+      } else {
         this.setFontSize(this.el.nativeElement.parentElement.clientWidth);
       }
       this.ngAfterViewInit();
@@ -53,12 +57,12 @@ export class FittextDirective implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
+    if (this.useMaxFontSize) {
+      this.maxFontSize = parseInt(window.getComputedStyle(this.el.nativeElement).fontSize, null);
+    }
+
     if (this.fittext) {
-      if (this.activateOnInputEvents) {
-        this.setFontSize(this.el.nativeElement.parentElement.clientHeight);
-      } else {
-        this.setFontSize(this.el.nativeElement.parentElement.clientWidth);
-      }
+      this.setFontSize(this.maxFontSize);
     }
     this.el.nativeElement.style.setProperty('will-change', 'content');
   }

@@ -38,7 +38,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'label',
       template: `<div>
-                    <div [fittext]="true" [activateOnResize]="true">Bla bla bla...</div>
+                    <div [fittext]="true" [activateOnResize]="true" [useMaxFontSize]="false">Bla bla bla...</div>
                 </div>`
     })
 
@@ -53,7 +53,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'inputbox',
       template: `<div>
-                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true">`,
+                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [useMaxFontSize]="false">`,
                 </div>`
     })
 
@@ -67,6 +67,7 @@ Import it in your Angular2 project like a module
   | fittext | is the selector of the directive | true/false
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
   | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
+  | useMaxFontSize | Use font-size from element as maximum font-size | enable/disable the usage of max font-size of the lement
 
 
 ### Development
