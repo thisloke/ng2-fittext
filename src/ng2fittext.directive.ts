@@ -73,13 +73,14 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
         : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
       if (overflow) {
         this.setFontSize(this.calculateFontSize(this.fontSize, this.speed));
+        this.ngAfterViewInit();
+      } else {
         if (this.useMaxFontSize) {
-          if(this.fontSize > this.maxFontSize){
+          if(this.fontSize > this.maxFontSize) {
               this.maxFontSize = parseInt(window.getComputedStyle(this.el.nativeElement).fontSize, null);
               this.setFontSize(this.maxFontSize);
           }
         }
-        this.ngAfterViewInit();
       }
     }
   }
