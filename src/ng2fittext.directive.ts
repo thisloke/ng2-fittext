@@ -10,6 +10,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
   @Input('container') container: any;
   @Input('activateOnInputEvents') activateOnInputEvents: boolean;
   @Input('useMaxFontSize') useMaxFontSize: boolean;
+  @Input('minFontSize') minFontSize = 7;
   @Input('modelToWatch') modelToWatch: any;
   private maxFontSize: number = 1000;
   private fontSize: number = 0;
@@ -19,6 +20,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
   }
 
   setFontSize(fontSize) {
+    if (fontSize < this.minFontSize) {
+      // force that font size will never be lower than minimal allowed font size
+      fontSize = this.minFontSize;
+    }
+
     this.fontSize = fontSize;
     return this.el.nativeElement.style.setProperty('font-size', (fontSize).toString() + 'px');
   }
@@ -73,8 +79,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
       let overflow = this.container ? this.checkOverflow(this.container, this.el.nativeElement)
           : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
       if (overflow) {
-        this.setFontSize(this.calculateFontSize(this.fontSize, this.speed));
-        this.ngAfterViewInit();
+        if (this.fontSize > this.minFontSize) {
+          // iterate only until font size is bigger than minimal value
+          this.setFontSize(this.calculateFontSize(this.fontSize, this.speed));
+          this.ngAfterViewInit();
+        }
       } else {
         if (this.useMaxFontSize) {
           if(this.fontSize > this.maxFontSize) {
