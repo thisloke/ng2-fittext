@@ -10,7 +10,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
   @Input('container') container: any;
   @Input('activateOnInputEvents') activateOnInputEvents: boolean;
   @Input('useMaxFontSize') useMaxFontSize: boolean;
-  @Input('modelToWatch') modelToWatch: string;
+  @Input('modelToWatch') modelToWatch: any;
   private maxFontSize: number = 1000;
   private fontSize: number = 0;
   private speed: number = 1.05;
