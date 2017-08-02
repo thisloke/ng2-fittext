@@ -1,15 +1,16 @@
-import {Directive, ElementRef, Renderer, Input, AfterViewInit, HostListener, OnInit} from '@angular/core';
+import {Directive, ElementRef, Renderer, Input, AfterViewInit, HostListener, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 
 @Directive({
   selector: '[fittext]'
 })
-export class Ng2FittextDirective implements AfterViewInit, OnInit {
+export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
 
   @Input('fittext') fittext: any;
   @Input('activateOnResize') activateOnResize: boolean;
   @Input('container') container: any;
   @Input('activateOnInputEvents') activateOnInputEvents: boolean;
   @Input('useMaxFontSize') useMaxFontSize: boolean;
+  @Input('modelToWatch') modelToWatch: string;
   private maxFontSize: number = 1000;
   private fontSize: number = 0;
   private speed: number = 1.05;
@@ -38,11 +39,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
   onResize() {
     if (this.activateOnResize && this.fittext) {
       if (this.activateOnInputEvents && this.fittext) {
-          this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
+        this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
       } else {
         this.setFontSize(this.container ? this.container.clientWidth : this.el.nativeElement.parentElement.clientWidth);
       }
-     
+
       this.ngAfterViewInit();
     }
   }
@@ -50,8 +51,8 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
   @HostListener('input', ['$event'])
   onInputEvents() {
     if (this.activateOnInputEvents && this.fittext) {
-        this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
-        this.ngAfterViewInit();
+      this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
+      this.ngAfterViewInit();
     }
   }
 
@@ -70,18 +71,25 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit {
   ngAfterViewInit() {
     if (this.fittext) {
       let overflow = this.container ? this.checkOverflow(this.container, this.el.nativeElement)
-        : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
+          : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
       if (overflow) {
         this.setFontSize(this.calculateFontSize(this.fontSize, this.speed));
         this.ngAfterViewInit();
       } else {
         if (this.useMaxFontSize) {
           if(this.fontSize > this.maxFontSize) {
-              this.maxFontSize = parseInt(window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement).fontSize, null);
-              this.setFontSize(this.maxFontSize);
+            this.maxFontSize = parseInt(window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement).fontSize, null);
+            this.setFontSize(this.maxFontSize);
           }
         }
       }
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.modelToWatch) {
+      // change of model to watch - call ngAfterViewInit where is implemented logic to change size
+      setTimeout(_ => this.ngAfterViewInit() );
     }
   }
 }
