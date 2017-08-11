@@ -1,9 +1,9 @@
-import {Directive, ElementRef, Renderer, Input, AfterViewInit, HostListener, OnInit, OnChanges, SimpleChanges} from '@angular/core';
+import {Directive, ElementRef, Renderer, Input, AfterViewInit, AfterViewChecked, HostListener, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 
 @Directive({
   selector: '[fittext]'
 })
-export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
+export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, AfterViewChecked {
 
   @Input('fittext') fittext: any;
   @Input('activateOnResize') activateOnResize: boolean;
@@ -100,5 +100,10 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges {
       // change of model to watch - call ngAfterViewInit where is implemented logic to change size
       setTimeout(_ => this.ngAfterViewInit() );
     }
+  }
+
+  ngAfterViewChecked() {
+    this.setFontSize(this.container ? this.container.clientWidth : this.el.nativeElement.parentElement.clientWidth);
+    this.ngAfterViewInit();
   }
 }
