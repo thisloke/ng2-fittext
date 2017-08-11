@@ -95,7 +95,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     }
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes: any): void {
     if (changes.modelToWatch) {
       // change of model to watch - call ngAfterViewInit where is implemented logic to change size
       setTimeout(_ => this.ngAfterViewInit() );
