@@ -86,7 +86,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
         }
       } else {
         if (this.useMaxFontSize) {
-          if(this.fontSize > this.maxFontSize) {
+          if (this.fontSize > this.maxFontSize) {
             this.maxFontSize = parseInt(window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement).fontSize, null);
             this.setFontSize(this.maxFontSize);
           }
@@ -103,7 +103,9 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
   }
 
   ngAfterViewChecked() {
-    this.setFontSize(this.container ? this.container.clientWidth : this.el.nativeElement.parentElement.clientWidth);
-    this.ngAfterViewInit();
+    if (this.fontSize > this.minFontSize) {
+      this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
+      this.ngAfterViewInit();
+    }
   }
 }
