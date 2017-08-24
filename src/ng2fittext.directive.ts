@@ -15,6 +15,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
   private maxFontSize: number = 1000;
   private fontSize: number = 0;
   private speed: number = 1.05;
+  private done: boolean = false;
 
   constructor(public el: ElementRef, public renderer: Renderer) {
   }
@@ -43,6 +44,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
   @HostListener('window:resize', ['$event'])
   onResize() {
+    this.done = false;
     if (this.activateOnResize && this.fittext) {
       if (this.activateOnInputEvents && this.fittext) {
         this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
@@ -56,6 +58,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
   @HostListener('input', ['$event'])
   onInputEvents() {
+    this.done = false;
     if (this.activateOnInputEvents && this.fittext) {
       this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
       this.ngAfterViewInit();
@@ -75,7 +78,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
   }
 
   ngAfterViewInit() {
-    if (this.fittext) {
+    if (this.fittext && this.done === false) {
       let overflow = this.container ? this.checkOverflow(this.container, this.el.nativeElement)
           : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
       if (overflow) {
@@ -91,6 +94,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
             this.setFontSize(this.maxFontSize);
           }
         }
+        this.done = true;
       }
     }
   }
@@ -104,8 +108,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
   ngAfterViewChecked() {
     if (this.fontSize > this.minFontSize) {
-      this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
-      this.ngAfterViewInit();
+      const fontSize = this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight;
+      if (fontSize > 0 && this.done === false) {
+        this.setFontSize(this.container ? this.container.clientHeight : this.el.nativeElement.parentElement.clientHeight);
+        this.ngAfterViewInit();
+      }
     }
   }
 }
