@@ -32,6 +32,23 @@ Import it in your Angular2 project like a module
     ```
 
 2) Use it in your components
+
+    Fit with specified container (can be the parent or a deeper ancestor)
+    ```sh
+   import {Component} from '@angular/core';
+
+    @Component({
+      selector: 'label',
+      template: `<div #container>
+                    <div [fittext]="true" [activateOnResize]="true" [container]="container" [useMaxFontSize]="false">Bla bla bla...</div>
+                </div>`
+    })
+
+    export class LabelComponent {}
+    ```
+
+
+    Fit with the parent element (this works if you have a variable number of element between element and parent)
     ```sh
    import {Component} from '@angular/core';
 
@@ -45,6 +62,8 @@ Import it in your Angular2 project like a module
     export class LabelComponent {}
     ```
 
+
+
     **NEW! Support for autoresize input box!**
 
     ```sh
@@ -52,22 +71,43 @@ Import it in your Angular2 project like a module
 
     @Component({
       selector: 'inputbox',
-      template: `<div>
-                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [useMaxFontSize]="false">`,
+      template: `<div #container>
+                    <input [fittext]="true" [activateOnResize]="true" [container]="container" [activateOnInputEvents]="true" [useMaxFontSize]="false">`,
                 </div>`
     })
 
     export class InputBoxComponent {}
     ```
 
+
+
+    **NEW! Support for maxFontSize!**
+
+    ```sh
+   import {Component} from '@angular/core';
+
+    @Component({
+      selector: 'inputbox',
+      template: `<div>
+                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [useMaxFontSize]="true">`,
+                </div>`
+    })
+
+    export class InputBoxComponent {}
+    ```
+
+
    Parameters:
 
   | Parameter | Description | Values |
   | --- | --- | --- |
   | fittext | is the selector of the directive | true/false
+  | container | the container to fit (if not present it fit default to parent container)| ElementRef
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
   | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
   | useMaxFontSize | Use font-size from element as maximum font-size | enable/disable the usage of max font-size of the lement
+  | minFontSize | minimal font size | number, default is 7
+  | modelToWatch | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model
 
 
 ### Development
