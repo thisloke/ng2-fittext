@@ -1,7 +1,24 @@
-# Node generated files
+*.spec.ts
+*.tgz
+.erector
+.gitignore
+.npmignore
+.vscode
+build
+coverage
+debug.log
+DEVELOPMENT.md
+dist
+index.ts
+karma.conf.js
 node_modules
-npm-debug.log
-# OS generated files
-Thumbs.db
-.DS_Store
-# Ignored files
+out-tsc
+src
+tasks
+test.ts
+tsconfig.*json
+tslint.json
+typings
+typings.json
+vendor.ts
+webpack

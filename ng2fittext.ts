@@ -1,1 +1,0 @@
-export {Ng2FittextModule} from './src/ng2fittext.module';
