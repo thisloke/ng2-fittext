@@ -1,4 +1,13 @@
-import {Directive, ElementRef, Renderer, Input, AfterViewInit, AfterViewChecked, HostListener, OnInit, OnChanges} from '@angular/core';
+import {
+    AfterViewChecked,
+    AfterViewInit,
+    Directive,
+    ElementRef, HostListener,
+    Input,
+    OnChanges,
+    OnInit,
+    Renderer2
+} from '@angular/core';
 
 @Directive({
     selector: '[fittext]'
@@ -7,7 +16,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
     @Input('fittext') fittext: any;
     @Input('activateOnResize') activateOnResize: boolean;
-    @Input('container') container: any;
+    @Input('container') container: HTMLElement;
     @Input('activateOnInputEvents') activateOnInputEvents: boolean;
     @Input('useMaxFontSize') useMaxFontSize: boolean;
     @Input('minFontSize') minFontSize = 7;
@@ -17,10 +26,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     private speed = 1.05;
     private done = false;
 
-    constructor(public el: ElementRef, public renderer: Renderer) { }
+    constructor(public el: ElementRef,
+                public renderer: Renderer2) {}
 
-    setFontSize(fontSize) {
-        if (this.isVisible() && this.done === false) {
+    setFontSize(fontSize: number) {
+        if (this.isVisible() && !this.done) {
             if (fontSize < this.minFontSize) {
                 // force that font size will never be lower than minimal allowed font size
                 fontSize = this.minFontSize;
@@ -31,7 +41,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
         }
     }
 
-    calculateFontSize(fontSize, speed) {
+    calculateFontSize(fontSize: number, speed: number) {
         // TODO Do with Gauss
         return Math.floor(fontSize / speed);
     }
@@ -68,7 +78,10 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     ngOnInit() {
         this.done = false;
         if (this.useMaxFontSize) {
-            this.maxFontSize = parseInt(this.getComputetStyle().fontSize, null);
+            const fontSize = this.getComputetStyle().fontSize;
+            if (fontSize) {
+                this.maxFontSize = parseInt(fontSize, undefined);
+            }
         }
 
         if (this.fittext) {
@@ -76,10 +89,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
         }
 
         this.el.nativeElement.style.setProperty('will-change', 'content');
+        this.ngAfterViewInit();
     }
 
     ngAfterViewInit() {
-        if (this.isVisible() && this.done === false) {
+        if (this.isVisible() && !this.done) {
             if (this.fittext) {
                 const overflow = this.container ? this.checkOverflow(this.container, this.el.nativeElement)
                     : this.checkOverflow(this.el.nativeElement.parentElement, this.el.nativeElement);
@@ -92,8 +106,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
                 } else {
                     if (this.useMaxFontSize) {
                         if (this.fontSize > this.maxFontSize) {
-                            this.maxFontSize = parseInt(this.getComputetStyle().fontSize, null);
-                            this.setFontSize(this.maxFontSize);
+                            const fontSize = this.getComputetStyle().fontSize;
+                            if (fontSize) {
+                                this.maxFontSize = parseInt(fontSize, undefined);
+                                this.setFontSize(this.maxFontSize);
+                            }
                         }
                     }
                     this.done = true;
@@ -105,7 +122,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     ngOnChanges(changes: any): void {
         if (changes.modelToWatch) {
             // change of model to watch - call ngAfterViewInit where is implemented logic to change size
-            setTimeout(_ => this.ngAfterViewInit() );
+            setTimeout(() => {
+                this.done = false;
+                this.setFontSize(this.maxFontSize);
+                this.ngAfterViewInit();
+            });
         }
     }
 

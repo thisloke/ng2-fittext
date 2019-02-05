@@ -31,7 +31,7 @@ Import it in your Angular2 project like a module
 
     ```
 
-2) Use it in your components
+2) Use it in your componentsgit 
 
     Fit with specified container (can be the parent or a deeper ancestor)
     ```sh

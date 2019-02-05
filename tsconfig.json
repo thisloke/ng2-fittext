@@ -6,9 +6,14 @@
     "compilerOptions": {
         "baseUrl": "",
         "declaration": true,
+        "stripInternal": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "lib": ["es2015", "dom"],
+        "inlineSources": true,
+        "rootDir": "./src",
         "mapRoot": "./",
         "module": "es2015",
         "moduleResolution": "node",
@@ -17,7 +22,10 @@
         "target": "es5",
         "typeRoots": [
             "./node_modules/@types"
-        ]
+        ],
+        "paths": {
+            "@angular/core": ["./node_modules/@angular/core"]
+        }
     },
     "files": [
         "./src/index.ts"
