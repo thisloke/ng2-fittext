@@ -5,40 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/publishPackage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/distPackage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.erector" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DEVELOPMENT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example.main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/directives/ng2-fittext.directive.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ng2-fittext.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ng2-fittext.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/copy-build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/copy-globs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/inline-resources.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/rollup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.es2015.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.es5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/webpack.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/webpack.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/webpack.utils.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,15 +37,17 @@
         <counts>
           <entry key="html" value="215" />
           <entry key="js" value="4" />
-          <entry key="json" value="374" />
+          <entry key="json" value="379" />
+          <entry key="md" value="5" />
           <entry key="ts" value="552" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="215" />
-          <entry key="JSON" value="342" />
+          <entry key="JSON" value="347" />
           <entry key="JavaScript" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="TypeScript" value="552" />
           <entry key="tsconfig" value="32" />
         </counts>
@@ -90,7 +59,7 @@
           <entry key="html" value="2" />
           <entry key="js" value="5" />
           <entry key="json" value="16" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="ts" value="18" />
         </counts>
       </usages-collector>
@@ -100,7 +69,7 @@
           <entry key="HTML" value="2" />
           <entry key="JSON" value="13" />
           <entry key="JavaScript" value="5" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="18" />
           <entry key="tsconfig" value="3" />
         </counts>
@@ -112,11 +81,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
                 <element signature="e#0#170#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -133,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ng2-fittext.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -182,15 +160,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/dev/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -225,6 +194,8 @@
       <find>typesc</find>
       <find>modelT</find>
       <find>inline</find>
+      <find>ng2Fitt</find>
+      <find>ng2-fittext</find>
       <find>ngx</find>
       <find>Ngx</find>
     </findStrings>
@@ -241,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/directives/ngx-fittext.directive.spec.ts" />
         <option value="$PROJECT_DIR$/examples/dev/tsconfig.json" />
         <option value="$PROJECT_DIR$/examples/dev/node_modules/rxjs/internal/types.d.ts" />
@@ -260,6 +230,7 @@
         <option value="$PROJECT_DIR$/examples/dev/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts" />
         <option value="$PROJECT_DIR$/src/ng2-fittext.module.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -298,51 +269,6 @@
             <path>
               <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
               <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx-fittext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx-fittext" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="directives" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -395,12 +321,12 @@
       <workItem from="1510654264215" duration="30000" />
       <workItem from="1510654729260" duration="423000" />
       <workItem from="1549319553054" duration="7284000" />
-      <workItem from="1549327022612" duration="131000" />
+      <workItem from="1549327022612" duration="406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8521000" />
+    <option name="totallyTimeSpent" value="8796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
@@ -498,11 +424,6 @@
     <entry file="file://$PROJECT_DIR$/tsconfig.test.json" />
     <entry file="file://$PROJECT_DIR$/tsconfig.es5.json" />
     <entry file="file://$PROJECT_DIR$/karma.conf.js" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -582,16 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/distPackage.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -606,6 +517,23 @@
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
