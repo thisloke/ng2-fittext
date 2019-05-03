@@ -1,6 +1,6 @@
 {
   "name": "ng2-fittext",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Ng2 Fittext, an Angular library",
   "main": "./bundles/ng2-fittext.umd.js",
   "module": "./ng2-fittext.es5.js",
