@@ -40,7 +40,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'label',
       template: `<div #container>
-                    <div [fittext]="true" [activateOnResize]="true" [container]="container" [useMaxFontSize]="false">Bla bla bla...</div>
+                    <div [fittext]="true" [activateOnResize]="true" [container]="container">Bla bla bla...</div>
                 </div>`
     })
 
@@ -55,7 +55,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'label',
       template: `<div>
-                    <div [fittext]="true" [activateOnResize]="true" [useMaxFontSize]="false">Bla bla bla...</div>
+                    <div [fittext]="true" [activateOnResize]="true">Bla bla bla...</div>
                 </div>`
     })
 
@@ -72,7 +72,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'inputbox',
       template: `<div #container>
-                    <input [fittext]="true" [activateOnResize]="true" [container]="container" [activateOnInputEvents]="true" [useMaxFontSize]="false">`,
+                    <input [fittext]="true" [activateOnResize]="true" [container]="container" [activateOnInputEvents]="true">`,
                 </div>`
     })
 
@@ -89,7 +89,7 @@ Import it in your Angular2 project like a module
     @Component({
       selector: 'inputbox',
       template: `<div>
-                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [useMaxFontSize]="true">`,
+                    <input [fittext]="true" [activateOnResize]="true" [activateOnInputEvents]="true" [minFontSize]="40" [maxFontSize]="100">`,
                 </div>`
     })
 
@@ -105,7 +105,7 @@ Import it in your Angular2 project like a module
   | container | the container to fit (if not present it fit default to parent container)| ElementRef
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
   | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
-  | useMaxFontSize | Use font-size from element as maximum font-size | enable/disable the usage of max font-size of the lement
+  | maxFontSize | maximal font size | number, default is 1000
   | minFontSize | minimal font size | number, default is 7
   | modelToWatch | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model
 
