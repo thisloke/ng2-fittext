@@ -2,8 +2,9 @@
 <div style="border: 2px solid; overflow:hidden; width:100%; height:300px; font-size:520px;">
   <div [fittext]="true"
        [modelToWatch]="title"
-       [activateOnResize]="true"
-       [useMaxFontSize]="true">{{title}}</div>
+       [maxFontSize]="50"
+       [minFontSize]="30"
+       [activateOnResize]="true">{{title}}</div>
 </div>
 
 <button (click)="click('add')"> ADD text</button>

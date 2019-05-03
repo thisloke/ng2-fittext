@@ -18,10 +18,9 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
   @Input('activateOnResize') activateOnResize: boolean;
   @Input('container') container: HTMLElement;
   @Input('activateOnInputEvents') activateOnInputEvents: boolean;
-  @Input('useMaxFontSize') useMaxFontSize: boolean;
   @Input('minFontSize') minFontSize = 7;
+  @Input('maxFontSize') maxFontSize = 1000;
   @Input('modelToWatch') modelToWatch: any;
-  private maxFontSize = 1000;
   private fontSize = 1000;
   private speed = 1.05;
   private done = false;
@@ -34,6 +33,9 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
       if (fontSize < this.minFontSize) {
         // force that font size will never be lower than minimal allowed font size
         fontSize = this.minFontSize;
+      }
+      if(fontSize > this.maxFontSize){
+        fontSize = this.maxFontSize;
       }
 
       this.fontSize = fontSize;
@@ -77,13 +79,10 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
   ngOnInit() {
     this.done = false;
-    if (this.useMaxFontSize) {
-      const fontSize = this.getComputetStyle().fontSize;
-      if (fontSize) {
-        this.maxFontSize = parseInt(fontSize, undefined);
-      }
+    const fontSize = this.getComputetStyle().fontSize;
+    if (fontSize) {
+      this.maxFontSize = parseInt(fontSize, undefined);
     }
-
     if (this.fittext) {
       this.setFontSize(this.maxFontSize);
     }
@@ -104,13 +103,11 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
             this.ngAfterViewInit();
           }
         } else {
-          if (this.useMaxFontSize) {
-            if (this.fontSize > this.maxFontSize) {
-              const fontSize = this.getComputetStyle().fontSize;
-              if (fontSize) {
-                this.maxFontSize = parseInt(fontSize, undefined);
-                this.setFontSize(this.maxFontSize);
-              }
+          if (this.fontSize > this.maxFontSize) {
+            const fontSize = this.getComputetStyle().fontSize;
+            if (fontSize) {
+              this.maxFontSize = parseInt(fontSize, undefined);
+              this.setFontSize(this.maxFontSize);
             }
           }
           this.done = true;

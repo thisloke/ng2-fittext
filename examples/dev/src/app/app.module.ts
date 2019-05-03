@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {Ng2FittextModule} from 'ng2-fittext';
+import {Ng2FittextDirective} from './ng2-fittext.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Ng2FittextDirective
   ],
   imports: [
-    BrowserModule,
-    Ng2FittextModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [Ng2FittextDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
