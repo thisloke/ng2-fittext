@@ -1,3 +1,4 @@
+<h2>Add text or remove text from div</h2>
 <div style="border: 2px solid; overflow:hidden; width:100%; height:300px; font-size:520px;">
   <div [fittext]="true"
        [modelToWatch]="title"
@@ -7,7 +8,13 @@
 
 <button (click)="click('add')"> ADD text</button>
 <button (click)="click('remove')"> REMOVE text</button>
-
-<div #cont2 style="border: 2px solid; height:101px; width:20%;">
-  <input [fittext]="true" style="width:100%; height:100px" [activateOnResize]="true" [activateOnInputEvents]="true" [container]="cont2">
+<br/>
+<br/>
+<h2>Write text in input box (text fit inside without overflowing)</h2>
+<div #cont2 style="border: 2px solid; height:101px; width:300px;">
+  <input [fittext]="true"
+         style="width:100%; height:100px"
+         [activateOnResize]="true"
+         [activateOnInputEvents]="true"
+         [container]="cont2">
 </div>
