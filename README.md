@@ -106,6 +106,7 @@ Import it in your Angular2 project like a module
   | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
   | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
   | maxFontSize | maximal font size | number, default is 1000
+  | **!deprecated!** useMaxFontSize | use max font size if is true | deprecated!
   | minFontSize | minimal font size | number, default is 7
   | modelToWatch | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model
 
