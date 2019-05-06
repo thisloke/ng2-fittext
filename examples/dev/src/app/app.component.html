@@ -1,4 +1,4 @@
-<h2>Add text or remove text from div</h2>
+<h2>Add text or remove text from div (max and min font size)</h2>
 <div style="border: 2px solid; overflow:hidden; width:100%; height:300px; font-size:520px;">
   <div [fittext]="true"
        [modelToWatch]="title"
@@ -7,8 +7,17 @@
        [activateOnResize]="true">{{title}}</div>
 </div>
 
+
+<h2>Add text or remove text from div (no max and no min font size)</h2>
+<div style="border: 2px solid; overflow:hidden; width:100%; height:300px; font-size:520px;">
+  <div [fittext]="true"
+       [modelToWatch]="title"
+       [activateOnResize]="true">{{title}}</div>
+</div>
+
 <button (click)="click('add')"> ADD text</button>
 <button (click)="click('remove')"> REMOVE text</button>
+
 <br/>
 <br/>
 <h2>Write text in input box (text fit inside without overflowing)</h2>
