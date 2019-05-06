@@ -31,7 +31,6 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     setFontSize(fontSize: number) {
         if (this.isVisible() && !this.done) {
             if (fontSize < this.minFontSize) {
-                // force that font size will never be lower than minimal allowed font size
                 fontSize = this.minFontSize;
             }
             if(fontSize > this.maxFontSize){
@@ -44,7 +43,6 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     }
 
     calculateFontSize(fontSize: number, speed: number) {
-        // TODO Do with Gauss
         return Math.floor(fontSize / speed);
     }
 
@@ -79,14 +77,6 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
 
     ngOnInit() {
         this.done = false;
-        const fontSize = this.getComputetStyle().fontSize;
-        if (fontSize) {
-            this.maxFontSize = parseInt(fontSize, undefined);
-        }
-        if (this.fittext) {
-            this.setFontSize(this.maxFontSize);
-        }
-
         this.el.nativeElement.style.setProperty('will-change', 'content');
         this.ngAfterViewInit();
     }
@@ -103,13 +93,6 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
                         this.ngAfterViewInit();
                     }
                 } else {
-                    if (this.fontSize > this.maxFontSize) {
-                        const fontSize = this.getComputetStyle().fontSize;
-                        if (fontSize) {
-                            this.maxFontSize = parseInt(fontSize, undefined);
-                            this.setFontSize(this.maxFontSize);
-                        }
-                    }
                     this.done = true;
                 }
             }
@@ -132,10 +115,6 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
             this.setFontSize(this.getStartFontSizeFromHeight());
             this.ngAfterViewInit();
         }
-    }
-
-    private getComputetStyle(): CSSStyleDeclaration {
-        return window.getComputedStyle(this.container ? this.container : this.el.nativeElement.parentElement);
     }
 
     private getStartFontSizeFromHeight(): number {
