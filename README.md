@@ -127,7 +127,7 @@ For sure is not a good implementation, maybe is not the best way to do it, but, 
 License
 ----
 
-ISC
+MIT
 
 
 **Lorenzo I.**
