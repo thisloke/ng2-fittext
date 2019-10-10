@@ -57,7 +57,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     }
 
     @HostListener('window:resize', ['$event'])
-    onResize() {
+    onResize(event: Event) {
         this.done = false;
         if (this.activateOnResize && this.fittext) {
             if (this.activateOnInputEvents && this.fittext) {
@@ -71,7 +71,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     }
 
     @HostListener('input', ['$event'])
-    onInputEvents() {
+    onInputEvents(event: Event) {
         this.done = false;
         if (this.activateOnInputEvents && this.fittext) {
             this.setFontSize(this.getStartFontSizeFromHeight());
