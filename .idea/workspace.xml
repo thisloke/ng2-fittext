@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="Ref: clean code&#10;Ref: update examples">
+    <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="Version upgrade 1.2.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publishPackage.json" beforeDir="false" afterPath="$PROJECT_DIR$/publishPackage.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.publish">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -129,8 +130,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.publish" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.prepublish" />
         <item itemvalue="npm.build" />
       </list>
@@ -165,7 +166,7 @@
       <workItem from="1557140703730" duration="220000" />
       <workItem from="1557302825561" duration="2796000" />
       <workItem from="1557394597603" duration="325000" />
-      <workItem from="1571049565190" duration="18000" />
+      <workItem from="1571049565190" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="Ref: clean code&#10;Ref: update examples">
       <created>1557130876740</created>
@@ -174,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557130876740</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version upgrade 1.2.7">
+      <created>1571049622945</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571049622945</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +201,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ref: clean code&#10;Ref: update examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ref: clean code&#10;Ref: update examples" />
+    <MESSAGE value="Version upgrade 1.2.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version upgrade 1.2.7" />
   </component>
 </project>
