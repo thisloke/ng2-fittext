@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="Version upgrade 1.2.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publishPackage.json" beforeDir="false" afterPath="$PROJECT_DIR$/publishPackage.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,7 +167,9 @@
       <workItem from="1557140703730" duration="220000" />
       <workItem from="1557302825561" duration="2796000" />
       <workItem from="1557394597603" duration="325000" />
-      <workItem from="1571049565190" duration="364000" />
+      <workItem from="1571049565190" duration="895000" />
+      <workItem from="1571135626185" duration="164000" />
+      <workItem from="1572945589004" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="Ref: clean code&#10;Ref: update examples">
       <created>1557130876740</created>
@@ -182,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571049622945</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version upgrade 1.2.7">
+      <created>1571049960812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571049960812</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +203,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
