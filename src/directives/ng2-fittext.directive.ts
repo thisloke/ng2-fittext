@@ -4,6 +4,8 @@ import {
     Directive,
     ElementRef, HostListener,
     Input,
+    Output,
+    EventEmitter,
     OnChanges,
     OnInit,
     Renderer2
@@ -25,6 +27,9 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
     @Input('useMaxFontSize') useMaxFontSize = true;
 
     @Input('modelToWatch') modelToWatch: any;
+    
+    @Output() fontSizeChanged = new EventEmitter();
+    
     private fontSize = 1000;
     private speed = 1.05;
     private done = false;
@@ -42,6 +47,7 @@ export class Ng2FittextDirective implements AfterViewInit, OnInit, OnChanges, Af
             }
 
             this.fontSize = fontSize;
+            this.fontSizeChanged.emit(fontSize);
             return this.el.nativeElement.style.setProperty('font-size', (fontSize).toString() + 'px');
         }
     }
