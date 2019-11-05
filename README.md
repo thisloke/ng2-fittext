@@ -111,8 +111,6 @@ Import it in your Angular2 project like a module
   | modelToWatch | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model
 
 
-fontSizeChanged
-
    Output Parameters:
 
   | Parameter | Description | Values |
