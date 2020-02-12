@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="Version upgrade 1.2.8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dev/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +149,7 @@
       <workItem from="1571135626185" duration="164000" />
       <workItem from="1572945589004" duration="252000" />
       <workItem from="1581498853844" duration="6408000" />
-      <workItem from="1581516389687" duration="1176000" />
+      <workItem from="1581516389687" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="Ref: clean code&#10;Ref: update examples">
       <created>1557130876740</created>

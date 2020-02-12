@@ -1,6 +1,6 @@
 {
   "name": "ng2-fittext",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "Ng2-fittext: An Angular2+ directive that change the font size until it fit the upper level container dimension.",
   "keywords": [
     "ng2-fittext",
