@@ -25,7 +25,7 @@
     "transpile": "ngc",
     "build": "../node_modules/.bin/ng-packagr -p package.json",
     "prepublish": "npm run test",
-    "publish": "npm run build && npm publish --access=public && rm -rf ./dist"
+    "publish": "npm run build && npm publish dist --access=public"
   },
   "repository": {
     "url": "https://github.com/lokenxo/ng2-fittext.git"
