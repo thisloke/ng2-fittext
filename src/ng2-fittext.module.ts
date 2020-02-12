@@ -1,6 +1,6 @@
 import { Ng2FittextDirective } from './directives/ng2-fittext.directive';
 import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
+import {NgModule} from "@angular/core";
 
 @NgModule({
     declarations: [
