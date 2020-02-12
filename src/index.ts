@@ -1,1 +1,1 @@
-export * from './ng2-fittext.module';
+export * from './directives/ng2-fittext.directive';
