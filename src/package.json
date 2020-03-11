@@ -29,5 +29,8 @@
   },
   "repository": {
     "url": "https://github.com/lokenxo/ng2-fittext.git"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
