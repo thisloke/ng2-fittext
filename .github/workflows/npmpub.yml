@@ -24,7 +24,7 @@ jobs:
 
     - run: npm install
     - run: npm run pack
-    - run: ls
+    - run: cp README.md ./src/lib/dist/README.md
     - uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
