@@ -34,7 +34,7 @@ $ npm install --save ng2-fittext
     export class LabelComponent {}
    ```
 
-###Examples
+### Examples
 Fit with the parent element (this works if you have a variable number of element between element and parent)
 
 ```sh
