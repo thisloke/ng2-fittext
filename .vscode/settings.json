@@ -1,4 +1,5 @@
 {
     "prettier.configPath": "./src/.prettierrc",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true
 }
