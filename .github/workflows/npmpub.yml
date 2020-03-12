@@ -28,5 +28,5 @@ jobs:
     - uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
-        package: "./src/lib/dist"
+        package: "./src/lib/dist/package.json"
 
