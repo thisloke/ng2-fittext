@@ -2,55 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d9e6998-eced-4f47-8fb4-3257db3e18e7" name="Default" comment="Version upgrade 1.2.8">
-      <change afterPath="$PROJECT_DIR$/src/lib/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/.npmignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/browserslist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/e2e/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/app/ng2-fittext.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/src/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dev/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/directives/ng2-fittext.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/directives/ng2-fittext.directive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ng2-fittext.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ng2-fittext.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +155,7 @@
       <workItem from="1572945589004" duration="252000" />
       <workItem from="1581498853844" duration="6408000" />
       <workItem from="1581516389687" duration="1254000" />
-      <workItem from="1584040192080" duration="5336000" />
+      <workItem from="1584040192080" duration="5962000" />
     </task>
     <task id="LOCAL-00001" summary="Ref: clean code&#10;Ref: update examples">
       <created>1557130876740</created>
@@ -268,29 +223,29 @@
       <screen x="1920" y="960" width="1920" height="1080" />
     </state>
     <state x="2613" y="1249" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584044666474" />
-    <state width="1897" height="242" key="GridCell.Tab.0.bottom" timestamp="1584045609089">
+    <state width="1897" height="242" key="GridCell.Tab.0.bottom" timestamp="1584046025683">
       <screen x="1920" y="960" width="1920" height="1080" />
     </state>
     <state width="1897" height="242" key="GridCell.Tab.0.bottom/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@0.219.1920.1080" timestamp="1584040732589" />
-    <state width="1897" height="242" key="GridCell.Tab.0.bottom/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584045609089" />
+    <state width="1897" height="242" key="GridCell.Tab.0.bottom/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584046025683" />
     <state width="1897" height="242" key="GridCell.Tab.0.bottom/0.27.1920.1011/1920.0.1920.1080@0.27.1920.1011" timestamp="1581516934990" />
-    <state width="1897" height="242" key="GridCell.Tab.0.center" timestamp="1584045609089">
+    <state width="1897" height="242" key="GridCell.Tab.0.center" timestamp="1584046025683">
       <screen x="1920" y="960" width="1920" height="1080" />
     </state>
     <state width="1897" height="242" key="GridCell.Tab.0.center/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@0.219.1920.1080" timestamp="1584040732589" />
-    <state width="1897" height="242" key="GridCell.Tab.0.center/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584045609089" />
+    <state width="1897" height="242" key="GridCell.Tab.0.center/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584046025683" />
     <state width="1897" height="242" key="GridCell.Tab.0.center/0.27.1920.1011/1920.0.1920.1080@0.27.1920.1011" timestamp="1581516934990" />
-    <state width="1897" height="242" key="GridCell.Tab.0.left" timestamp="1584045609088">
+    <state width="1897" height="242" key="GridCell.Tab.0.left" timestamp="1584046025683">
       <screen x="1920" y="960" width="1920" height="1080" />
     </state>
     <state width="1897" height="242" key="GridCell.Tab.0.left/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@0.219.1920.1080" timestamp="1584040732588" />
-    <state width="1897" height="242" key="GridCell.Tab.0.left/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584045609088" />
+    <state width="1897" height="242" key="GridCell.Tab.0.left/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584046025683" />
     <state width="1897" height="242" key="GridCell.Tab.0.left/0.27.1920.1011/1920.0.1920.1080@0.27.1920.1011" timestamp="1581516934990" />
-    <state width="1897" height="242" key="GridCell.Tab.0.right" timestamp="1584045609089">
+    <state width="1897" height="242" key="GridCell.Tab.0.right" timestamp="1584046025683">
       <screen x="1920" y="960" width="1920" height="1080" />
     </state>
     <state width="1897" height="242" key="GridCell.Tab.0.right/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@0.219.1920.1080" timestamp="1584040732589" />
-    <state width="1897" height="242" key="GridCell.Tab.0.right/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584045609089" />
+    <state width="1897" height="242" key="GridCell.Tab.0.right/0.219.1920.1080/1920.0.1280.960/1920.960.1920.1080@1920.960.1920.1080" timestamp="1584046025683" />
     <state width="1897" height="242" key="GridCell.Tab.0.right/0.27.1920.1011/1920.0.1920.1080@0.27.1920.1011" timestamp="1581516934990" />
     <state x="2100" y="1057" width="1536" height="901" key="MergeDialog" timestamp="1584041943170">
       <screen x="1920" y="960" width="1920" height="1080" />
