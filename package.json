@@ -6,6 +6,7 @@
     "start": "./node_modules/.bin/ng serve",
     "build": "./node_modules/.bin/ng build --aot --prod",
     "test": "./node_modules/.bin/ng test",
+    "test:headless": "./node_modules/.bin/ng test --browsers=ChromeHeadless",
     "lint": "./node_modules/.bin/ng lint",
     "e2e": "./node_modules/.bin/ng e2e",
     "pack": "./node_modules/.bin/ng-packagr -p ./src/lib/package.json"
