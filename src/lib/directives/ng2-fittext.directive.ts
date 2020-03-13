@@ -137,7 +137,7 @@ export class Ng2FittextDirective
     }
   }
 
-  private getStartFontSizeFromHeight(): number {
+  getStartFontSizeFromHeight(): number {
     return this.container
       ? this.container.clientHeight
       : this.el.nativeElement.parentElement.clientHeight;
