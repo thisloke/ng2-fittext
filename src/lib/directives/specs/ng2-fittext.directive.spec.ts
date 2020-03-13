@@ -71,7 +71,6 @@ describe('Class: Ng2FittextDirective', () => {
       newFontSize = 500;
       spyOn(ng2FittextDirective.fontSizeChanged, 'emit');
       ng2FittextDirective.setFontSize(newFontSize);
-      const currentFontSize: number = ng2FittextDirective.getFontSize();
       expect(ng2FittextDirective.fontSizeChanged.emit).toHaveBeenCalledWith(
         newFontSize
       );
@@ -81,7 +80,6 @@ describe('Class: Ng2FittextDirective', () => {
       newFontSize = 500;
       spyOn(ng2FittextDirective.el.nativeElement.style, 'setProperty');
       ng2FittextDirective.setFontSize(newFontSize);
-      const currentFontSize: number = ng2FittextDirective.getFontSize();
       expect(
         ng2FittextDirective.el.nativeElement.style.setProperty
       ).toHaveBeenCalledWith('font-size', `${newFontSize}px`);
@@ -99,6 +97,51 @@ describe('Class: Ng2FittextDirective', () => {
       expect(ng2FittextDirective.calculateFontSize(10, 3)).toEqual(3);
       expect(ng2FittextDirective.calculateFontSize(9, 3)).toEqual(3);
       expect(ng2FittextDirective.calculateFontSize(8, 3)).toEqual(2);
+    });
+  });
+
+  describe('Method: checkOverflow', () => {
+    let parentElementMock: any;
+    let childrenElementMock: any;
+
+    beforeEach(() => {
+      parentElementMock = {
+        clientWidth: 0,
+        clientHeight: 0,
+      };
+      childrenElementMock = {
+        scrollWidth: 0,
+        clientHeight: 0,
+      };
+    });
+
+    it('Should return false if no overflow is present', () => {
+      expect(
+        ng2FittextDirective.checkOverflow(
+          parentElementMock,
+          childrenElementMock
+        )
+      ).toBe(false);
+    });
+
+    it('Should return true if x axis has overflow', () => {
+      childrenElementMock.scrollWidth = 2;
+      expect(
+        ng2FittextDirective.checkOverflow(
+          parentElementMock,
+          childrenElementMock
+        )
+      ).toBe(true);
+    });
+
+    it('Should return true if y axis has overflow', () => {
+      childrenElementMock.clientHeight = 2;
+      expect(
+        ng2FittextDirective.checkOverflow(
+          parentElementMock,
+          childrenElementMock
+        )
+      ).toBe(true);
     });
   });
 });
