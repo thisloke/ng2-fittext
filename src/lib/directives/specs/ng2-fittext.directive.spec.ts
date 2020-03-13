@@ -175,4 +175,23 @@ describe('Class: Ng2FittextDirective', () => {
       expect(ng2FittextDirective.isDone()).toBe(defaultDoneValue);
     });
   });
+
+  describe('Method: isVisible', () => {
+    it('Should return the true if getStartFontSizeFromHeight() is greater than zero', () => {
+      spyOn(ng2FittextDirective, 'getStartFontSizeFromHeight').and.returnValue(
+        1
+      );
+      expect(ng2FittextDirective.isVisible()).toBe(true);
+    });
+
+    it('Should return the false if getStartFontSizeFromHeight() is smaller or equal to zero', () => {
+      const spy = spyOn(
+        ng2FittextDirective,
+        'getStartFontSizeFromHeight'
+      ).and.returnValue(0);
+      expect(ng2FittextDirective.isVisible()).toBe(false);
+      spy.and.returnValue(-1);
+      expect(ng2FittextDirective.isVisible()).toBe(false);
+    });
+  });
 });
