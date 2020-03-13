@@ -87,4 +87,10 @@ describe('Class: Ng2FittextDirective', () => {
       ).toHaveBeenCalledWith('font-size', `${newFontSize}px`);
     });
   });
+
+  describe('Method: getFontSize', () => {
+    it('Should return the current font size', () => {
+      expect(ng2FittextDirective.getFontSize()).toEqual(1000);
+    });
+  });
 });
