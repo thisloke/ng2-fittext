@@ -62,7 +62,7 @@ export class Ng2FittextDirective
     return Math.floor(fontSize / speed);
   }
 
-  checkOverflow(parent: any, children: any) {
+  checkOverflow(parent: any, children: any): boolean {
     const overflowX = children.scrollWidth - parent.clientWidth;
     const overflowY = children.clientHeight - parent.clientHeight;
     return overflowX > 1 || overflowY > 1;
