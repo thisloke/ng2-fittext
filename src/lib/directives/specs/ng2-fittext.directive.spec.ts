@@ -144,4 +144,28 @@ describe('Class: Ng2FittextDirective', () => {
       ).toBe(true);
     });
   });
+
+  describe('Method: getStartFontSizeFromHeight', () => {
+    it('Should return the container clientHeight value if the container is present', () => {
+      const containerClientHeight = 10;
+      ng2FittextDirective.container = {
+        clientHeight: containerClientHeight,
+      } as HTMLElement;
+      expect(ng2FittextDirective.getStartFontSizeFromHeight()).toEqual(
+        containerClientHeight
+      );
+    });
+
+    it('Should return the parentElement clientHeight value if no container is present', () => {
+      const parentlientHeight = 11;
+      elMock.nativeElement = {
+        parentElement: {
+          clientHeight: parentlientHeight,
+        },
+      } as HTMLElement;
+      expect(ng2FittextDirective.getStartFontSizeFromHeight()).toEqual(
+        parentlientHeight
+      );
+    });
+  });
 });
