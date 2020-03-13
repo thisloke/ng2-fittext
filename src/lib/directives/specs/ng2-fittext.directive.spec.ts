@@ -168,4 +168,11 @@ describe('Class: Ng2FittextDirective', () => {
       );
     });
   });
+
+  describe('Method: isDone', () => {
+    it('Should return the done property value', () => {
+      const defaultDoneValue = false;
+      expect(ng2FittextDirective.isDone()).toBe(defaultDoneValue);
+    });
+  });
 });
