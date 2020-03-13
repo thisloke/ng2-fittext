@@ -93,4 +93,12 @@ describe('Class: Ng2FittextDirective', () => {
       expect(ng2FittextDirective.getFontSize()).toEqual(1000);
     });
   });
+
+  describe('Method: calculateFontSize', () => {
+    it('Should return the font size rounded down', () => {
+      expect(ng2FittextDirective.calculateFontSize(10, 3)).toEqual(3);
+      expect(ng2FittextDirective.calculateFontSize(9, 3)).toEqual(3);
+      expect(ng2FittextDirective.calculateFontSize(8, 3)).toEqual(2);
+    });
+  });
 });

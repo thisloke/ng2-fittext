@@ -58,7 +58,7 @@ export class Ng2FittextDirective
     return this.fontSize;
   }
 
-  calculateFontSize(fontSize: number, speed: number) {
+  calculateFontSize(fontSize: number, speed: number): number {
     return Math.floor(fontSize / speed);
   }
 
