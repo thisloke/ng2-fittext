@@ -1,41 +1,45 @@
 # ng2-fittext
 
-An Angular2 directive written in pure typescript (and without jquery!), for autoscale the font size of an element to fit an upper level container.
+An Angular2 directive written in pure typescript (and without jquery!), to autoscale the font size of an element so that it fits an upper level container.
 
 ### Demo
+
 http://plnkr.co/edit/v0TQaYepV4E2Heur02j5?p=preview
 
 ### Installation
 
 Install the library
+
 ```sh
 $ npm install --save ng2-fittext
 ```
 
 ### Usage
-1) Declare it in your module
-    ```sh
-    import {Ng2FittextModule} from "ng2-fittext";
-    @NgModule({
-      imports: [
-        Ng2FittextModule
-      ]
-    })
+
+1. Declare it in your module
+   ```sh
+   import {Ng2FittextModule} from "ng2-fittext";
+   @NgModule({
+     imports: [
+       Ng2FittextModule
+     ]
+   })
    ```
-2) Use it in your components
-    ```sh
+2. Use it in your components
+   ```sh
    import {Component} from '@angular/core';
-    @Component({
-      selector: 'label',
-      template: `<div #container>
-                    <div [fittext]="true" [activateOnResize]="true" [container]="container">Bla bla bla...</div>
-                </div>`
-    })
-    export class LabelComponent {}
+   @Component({
+     selector: 'label',
+     template: `<div #container>
+                   <div [fittext]="true" [activateOnResize]="true" [container]="container">Bla bla bla...</div>
+               </div>`
+   })
+   export class LabelComponent {}
    ```
 
 ### Examples
-Fit with the parent element (this works if you have a variable number of element between element and parent)
+
+Fit to the parent element (this works if you have a variable number of elements between your element and its parent)
 
 ```sh
 import {Component} from '@angular/core';
@@ -61,6 +65,7 @@ import {Component} from '@angular/core';
 
 export class InputBoxComponent {}
 ```
+
 **NEW! Support for maxFontSize!**
 
 ```sh
@@ -74,46 +79,40 @@ import {Component} from '@angular/core';
 export class InputBoxComponent {}
 ```
 
+Input Parameters:
 
-   Input Parameters:
+| Parameter                       | Description                                                                             | Values                        |
+| ------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------- |
+| fittext                         | the directive selector                                                                  | true/false                    |
+| container                       | the container to fit (if not present it fits to the parent container by default)        | ElementRef                    |
+| activateOnResize                | enable/disable the autofit in case of window resize                                     | true or false (default false) |
+| activateOnInputEvents           | enable/disable the autofit in case of input box events (keydown, keyup etc..)           | true or false (default false) |
+| maxFontSize                     | maximum font size                                                                       | number, default is 1000       |
+| **!deprecated!** useMaxFontSize | use max font size if is true                                                            | deprecated!                   |
+| minFontSize                     | minimum font size                                                                       | number, default is 7          |
+| modelToWatch                    | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model             |
 
-  | Parameter | Description | Values |
-  | --- | --- | --- |
-  | fittext | is the selector of the directive | true/false
-  | container | the container to fit (if not present it fit default to parent container)| ElementRef
-  | activateOnResize | enable/disable the autofit in case of window resize | true or false (default false)
-  | activateOnInputEvents | enbale/disable the autofit in case of input box events (keydown, keyup etc..) | true or false (default false)
-  | maxFontSize | maximal font size | number, default is 1000
-  | **!deprecated!** useMaxFontSize | use max font size if is true | deprecated!
-  | minFontSize | minimal font size | number, default is 7
-  | modelToWatch | pass model to watch, when this model changes -> font size is automatically recalculated | any type of model
+Output Parameters:
 
+| Parameter       | Description       | Values |
+| --------------- | ----------------- | ------ |
+| fontSizeChanged | current font size | string |
 
-   Output Parameters:
-
-  | Parameter | Description | Values |
-  | --- | --- | --- |
-  | fontSizeChanged | current font size | string
-  
 ### Development
 
 Want to contribute? Great!
 Simply, clone the repository!
 
-I created this library because I always spended too much time for solve this problem and because i didn't find nothing on the web (13/03/2017) that do this without jquery and easily integrable in angular2.
-For sure is not a good implementation, maybe is not the best way to do it, but, it do the job.
+I created this library because I always spent too much time to solve this problem and didn't find anything on the web (13/03/2017) that does this without jquery and that is also easily integrable in angular2.
+For sure it is not the best implementation, maybe is not the best way to do it, but, it gets the job done.
 
 ### Todos
 
- - Write tests
- - Find a better algorithm to find the font-size who fits better the container
+- Write tests
+- Find a better algorithm to find the font-size who fits better the container
 
-License
-----
+## License
 
 MIT
 
-
 **Lorenzo I.**
-
-

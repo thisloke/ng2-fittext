@@ -29,7 +29,7 @@ export class Ng2FittextDirective
 
   @Input('modelToWatch') modelToWatch: any;
 
-  @Output() fontSizeChanged = new EventEmitter();
+  @Output() fontSizeChanged: EventEmitter<any> = new EventEmitter();
 
   private fontSize = 1000;
   private speed = 1.05;
@@ -37,29 +37,32 @@ export class Ng2FittextDirective
 
   constructor(public el: ElementRef, public renderer: Renderer2) {}
 
-  setFontSize(fontSize: number) {
-    if (this.isVisible() && !this.done) {
+  setFontSize(fontSize: number): void {
+    if (this.isVisible() && !this.isDone()) {
       if (fontSize < this.minFontSize) {
         fontSize = this.minFontSize;
       }
       if (fontSize > this.maxFontSize) {
         fontSize = this.maxFontSize;
       }
-
       this.fontSize = fontSize;
       this.fontSizeChanged.emit(fontSize);
-      return this.el.nativeElement.style.setProperty(
+      this.el.nativeElement.style.setProperty(
         'font-size',
         fontSize.toString() + 'px'
       );
     }
   }
 
-  calculateFontSize(fontSize: number, speed: number) {
+  getFontSize(): number {
+    return this.fontSize;
+  }
+
+  calculateFontSize(fontSize: number, speed: number): number {
     return Math.floor(fontSize / speed);
   }
 
-  checkOverflow(parent: any, children: any) {
+  checkOverflow(parent: any, children: any): boolean {
     const overflowX = children.scrollWidth - parent.clientWidth;
     const overflowY = children.clientHeight - parent.clientHeight;
     return overflowX > 1 || overflowY > 1;
@@ -95,7 +98,7 @@ export class Ng2FittextDirective
   }
 
   ngAfterViewInit() {
-    if (this.isVisible() && !this.done) {
+    if (this.isVisible() && !this.isDone()) {
       if (this.fittext) {
         const overflow = this.container
           ? this.checkOverflow(this.container, this.el.nativeElement)
@@ -134,7 +137,7 @@ export class Ng2FittextDirective
     }
   }
 
-  private getStartFontSizeFromHeight(): number {
+  getStartFontSizeFromHeight(): number {
     return this.container
       ? this.container.clientHeight
       : this.el.nativeElement.parentElement.clientHeight;
@@ -146,7 +149,11 @@ export class Ng2FittextDirective
       : this.el.nativeElement.parentElement.clientWidth;
   }
 
-  private isVisible(): boolean {
+  isDone(): boolean {
+    return this.done;
+  }
+
+  isVisible(): boolean {
     return this.getStartFontSizeFromHeight() > 0;
   }
 }
