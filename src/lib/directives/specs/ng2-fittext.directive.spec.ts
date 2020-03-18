@@ -268,4 +268,43 @@ describe('Class: Ng2FittextDirective', () => {
       ).toBe(true);
     });
   });
+
+  describe('Method: hasOverflow', () => {
+    let containerMock: any;
+    let parentElementMock: any;
+
+    beforeEach(() => {
+      containerMock = {
+        isContainer: true,
+      };
+      parentElementMock = {
+        isParentElement: true,
+      };
+      ng2FittextDirective.container = { ...containerMock };
+      ng2FittextDirective.el.nativeElement = {
+        parentElement: { ...parentElementMock },
+      } as HTMLElement;
+    });
+
+    it('Should calculate the overflow using the container if is present', () => {
+      spyOn(ng2FittextDirective, 'checkOverflow').and.callFake(
+        (parentElement: any, childrenElement: any) => {
+          expect(parentElement).toEqual(containerMock);
+          return true;
+        }
+      );
+      expect(ng2FittextDirective.hasOverflow()).toBe(true);
+    });
+
+    it('Should calculate the overflow using the parent element if the container is not present', () => {
+      delete ng2FittextDirective.container;
+      spyOn(ng2FittextDirective, 'checkOverflow').and.callFake(
+        (parentElement: any, childrenElement: any) => {
+          expect(parentElement).toEqual(parentElementMock);
+          return true;
+        }
+      );
+      expect(ng2FittextDirective.hasOverflow()).toBe(true);
+    });
+  });
 });
