@@ -109,13 +109,7 @@ export class Ng2FittextDirective
   ngAfterViewInit() {
     if (this.isVisible() && !this.isDone()) {
       if (this.fittext) {
-        const overflow = this.container
-          ? this.checkOverflow(this.container, this.el.nativeElement)
-          : this.checkOverflow(
-              this.el.nativeElement.parentElement,
-              this.el.nativeElement
-            );
-        if (overflow) {
+        if (this.hasOverflow()) {
           if (this.fontSize > this.minFontSize) {
             // iterate only until font size is bigger than minimal value
             this.setFontSize(this.calculateFontSize(this.fontSize, this.speed));
@@ -164,5 +158,14 @@ export class Ng2FittextDirective
 
   isVisible(): boolean {
     return this.getStartFontSizeFromHeight() > 0;
+  }
+
+  hasOverflow(): boolean {
+    return this.container
+      ? this.checkOverflow(this.container, this.el.nativeElement)
+      : this.checkOverflow(
+          this.el.nativeElement.parentElement,
+          this.el.nativeElement
+        );
   }
 }
