@@ -4,3 +4,5 @@ dist
 debug.log
 node_modules
 out-tsc
+/.vs
+/.angular
