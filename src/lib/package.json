@@ -1,6 +1,6 @@
 {
   "name": "ng2-fittext",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "Ng2-fittext: An Angular2+ directive that change the font size until it fit the upper level container dimension.",
   "keywords": [
     "ng2-fittext",
@@ -23,6 +23,6 @@
     }
   },
   "repository": {
-    "url": "https://github.com/lokenxo/ng2-fittext.git"
+    "url": "https://github.com/thisloke/ng2-fittext.git"
   }
 }
