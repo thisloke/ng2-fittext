@@ -10,7 +10,9 @@
     "test:headless:singleRun": "node node_modules/@angular/cli/bin/ng test --browsers=ChromeHeadlessDebug --watch false",
     "lint": "node node_modules/@angular/cli/bin/ng lint",
     "e2e": "node node_modules/@angular/cli/bin/ng e2e",
-    "pack": "ng-packagr -p ./src/lib/package.json"
+    "minor": "cd ./src/lib/ && npm version minor && ng-packagr -p package.json",
+    "major": "cd ./src/lib/ && npm version major && ng-packagr -p package.json",
+    "patch": "cd ./src/lib/ && npm version patch && ng-packagr -p package.json"
   },
   "private": true,
   "dependencies": {
