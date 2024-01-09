@@ -18,9 +18,9 @@ import {
 export class Ng2FittextDirective
   implements AfterViewInit, OnInit, OnChanges, AfterViewChecked {
   @Input('fittext') fittext: any;
-  @Input('activateOnResize') activateOnResize: boolean;
-  @Input('container') container: HTMLElement;
-  @Input('activateOnInputEvents') activateOnInputEvents: boolean;
+  @Input('activateOnResize') activateOnResize: boolean = true;
+  @Input('container') container: HTMLElement | null = null;
+  @Input('activateOnInputEvents') activateOnInputEvents: boolean = false;
   @Input('minFontSize') minFontSize = 7;
   @Input('maxFontSize') maxFontSize = 1000;
 
@@ -143,13 +143,13 @@ export class Ng2FittextDirective
   getStartFontSizeFromHeight(): number {
     return this.container
       ? this.container.clientHeight
-      : this.el.nativeElement.parentElement.clientHeight;
+      : this.el.nativeElement.parentElement!.clientHeight;
   }
 
   private getStartFontSizeFromWeight(): number {
     return this.container
       ? this.container.clientWidth
-      : this.el.nativeElement.parentElement.clientWidth;
+      : this.el.nativeElement.parentElement!.clientWidth;
   }
 
   isDone(): boolean {
@@ -164,7 +164,7 @@ export class Ng2FittextDirective
     return this.container
       ? this.checkOverflow(this.container, this.el.nativeElement)
       : this.checkOverflow(
-          this.el.nativeElement.parentElement,
+          this.el.nativeElement.parentElement!,
           this.el.nativeElement
         );
   }

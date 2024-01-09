@@ -297,7 +297,9 @@ describe('Class: Ng2FittextDirective', () => {
     });
 
     it('Should calculate the overflow using the parent element if the container is not present', () => {
-      delete ng2FittextDirective.container;
+      if(ng2FittextDirective) {
+        delete (ng2FittextDirective as any).container;
+      }
       spyOn(ng2FittextDirective, 'checkOverflow').and.callFake(
         (parentElement: any, childrenElement: any) => {
           expect(parentElement).toEqual(parentElementMock);
