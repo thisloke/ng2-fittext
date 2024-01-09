@@ -1,0 +1,23 @@
+name: Publish to NPM as patch release
+
+on:
+  push:
+    branches: [release-patch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: npm install
+      - run: npm run patch
+      - run: cp README.md ./src/lib/dist/README.md
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: './src/lib/dist/package.json'
