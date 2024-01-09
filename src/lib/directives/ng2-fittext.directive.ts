@@ -18,9 +18,9 @@ import {
 export class Ng2FittextDirective
   implements AfterViewInit, OnInit, OnChanges, AfterViewChecked {
   @Input('fittext') fittext: any;
-  @Input('activateOnResize') activateOnResize: boolean;
-  @Input('container') container: HTMLElement;
-  @Input('activateOnInputEvents') activateOnInputEvents: boolean;
+  @Input('activateOnResize') activateOnResize: boolean = true;
+  @Input('container') container: HTMLElement | null = null;
+  @Input('activateOnInputEvents') activateOnInputEvents: boolean = false;
   @Input('minFontSize') minFontSize = 7;
   @Input('maxFontSize') maxFontSize = 1000;
 
