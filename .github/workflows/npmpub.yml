@@ -1,8 +1,8 @@
-name: Publish to NPM as major release
+name: Publish to NPM
 
 on:
   push:
-    branches: [release]
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
