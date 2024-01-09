@@ -1,9 +1,8 @@
-name: Publish to NPM
+name: Publish to NPM as patch release
 
 on:
   push:
-    branches: [master]
-
+    branches: [release-patch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,8 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: npm install
-      - run: npm run pack
-      - run: npm run test:headless:singleRun
+      - run: npm run patch
       - run: cp README.md ./src/lib/dist/README.md
       - uses: JS-DevTools/npm-publish@v1
         with:
