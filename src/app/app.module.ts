@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {Ng2FittextModule} from '../lib/ng2-fittext.module';
+import { Ng2FittextModule } from 'lib';
 
 @NgModule({
   declarations: [

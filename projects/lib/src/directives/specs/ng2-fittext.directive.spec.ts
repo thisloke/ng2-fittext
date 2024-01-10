@@ -1,4 +1,4 @@
-import { Ng2FittextDirective } from '../ng2-fittext.directive';
+import { Ng2FittextDirective } from '../../ng2-fittext.directive';
 import { Renderer2, ElementRef } from '@angular/core';
 
 describe('Class: Ng2FittextDirective', () => {

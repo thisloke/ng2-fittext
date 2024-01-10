@@ -1,6 +1,0 @@
-build
-coverage
-dist
-debug.log
-node_modules
-out-tsc
