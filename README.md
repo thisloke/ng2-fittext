@@ -1,6 +1,5 @@
 <h1 align="center">
-  <img src="logo.svg" alt="" width="200" /><br />
-  Angular FitText
+  ng2-fittext
 </h1>
 
 <p align="center">An Angular 2+ directive, written in pure TypeScript (without jQuery!), to automatically scale the font size of an element so that it fits within its parent container.</p>
