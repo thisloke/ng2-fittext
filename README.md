@@ -12,9 +12,9 @@
 
 ## Demo
 Check out the live demo: [ng2-fittext Demo](https://stackblitz.com/edit/stackblitz-starters-7ghzat?file=src%2Fmain.ts)
-<p align="center">
-  <img src="ng2-fittext-example.gif" alt="ng2 fittext example" border="0" />
-</p>
+<div>
+  <img src="ng2-fittext-example.gif" alt="ng2 fittext example" border="0" style="width: 70%" align="center"/>
+</div>
 
 ## Installation
 
