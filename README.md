@@ -4,7 +4,7 @@ An Angular 2+ directive, written in pure TypeScript (without jQuery!), to automa
 
 ## Demo
 
-Check out the live demo: [ng2-fittext Demo]([http://plnkr.co/edit/v0TQaYepV4E2Heur02j5?p=preview](https://stackblitz.com/edit/stackblitz-starters-7ghzat?file=src%2Fmain.ts))
+Check out the live demo: [ng2-fittext Demo](https://stackblitz.com/edit/stackblitz-starters-7ghzat?file=src%2Fmain.ts)
 
 ## Installation
 
