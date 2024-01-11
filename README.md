@@ -1,10 +1,21 @@
-# ng2-fittext
+<h1 align="center">
+  <img src="logo.svg" alt="" width="200" /><br />
+  Angular FitText
+</h1>
 
-An Angular 2+ directive, written in pure TypeScript (without jQuery!), to automatically scale the font size of an element so that it fits within its parent container.
+<p align="center">An Angular 2+ directive, written in pure TypeScript (without jQuery!), to automatically scale the font size of an element so that it fits within its parent container.</p>
+
+[![Download via NPM](https://img.shields.io/npm/v/ng2-fittext.svg)](https://www.npmjs.com/package/ng2-fittext)
+![Angular](https://img.shields.io/badge/Angular-17-green.svg)
+![Build Status](https://github.com/thisloke/ng2-fittext/actions/workflows/tests.yml/badge.svg)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Demo
-
 Check out the live demo: [ng2-fittext Demo](https://stackblitz.com/edit/stackblitz-starters-7ghzat?file=src%2Fmain.ts)
+<p align="center">
+  <img src="ng2-fittext-example.gif" alt="ng2 fittext example" border="0" />
+</p>
 
 ## Installation
 
