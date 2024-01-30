@@ -11,7 +11,7 @@
     "release:minor": "cd ./projects/lib/ && npm version minor",
     "release:major": "cd ./projects/lib/ && npm version major",
     "release:patch": "cd ./projects/lib/ && npm version patch",
-    "pack": "npm run build lib"
+    "pack": "npm run build lib && cp ./README.md ./dist/lib/README.md"
   },
   "private": true,
   "dependencies": {
