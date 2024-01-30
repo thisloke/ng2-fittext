@@ -6,3 +6,5 @@ node_modules
 out-tsc
 /.vs
 /.angular
+.idea
+.DS_Store
