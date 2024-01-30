@@ -20,14 +20,14 @@ Check out the live demo: [ng2-fittext Demo](https://stackblitz.com/edit/stackbli
 
 Install the library using npm:
 
-```
-$ npm install --save ng2-fittext
+```bash
+npm install --save ng2-fittext
 ```
 
 ### Usage
 
 1. Import the module in your Angular application:
-```
+```ts
 import { Ng2FittextModule } from "ng2-fittext";
 
 @NgModule({
@@ -36,7 +36,7 @@ import { Ng2FittextModule } from "ng2-fittext";
 ```
 
 2. Use the directive in your components:
-```
+```ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -54,7 +54,7 @@ export class LabelComponent {}
 
 Fit to the parent element (works if you have a variable number of elements between your element and its parent):
 
-```
+```ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -70,7 +70,7 @@ export class LabelComponent {}
 
 **NEW! Support for auto-resize input box:**
 
-```
+```ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -86,7 +86,7 @@ export class InputBoxComponent {}
 
 **NEW! Support for maxFontSize:**
 
-```
+```ts
 import { Component } from '@angular/core';
 
 @Component({
