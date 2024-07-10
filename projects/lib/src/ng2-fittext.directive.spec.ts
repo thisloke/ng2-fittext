@@ -1,15 +1,13 @@
-import { Ng2FittextDirective } from '../../ng2-fittext.directive';
+import { Ng2FittextDirective } from './ng2-fittext.directive';
 import { Renderer2, ElementRef } from '@angular/core';
 
 describe('Class: Ng2FittextDirective', () => {
   let ng2FittextDirective: Ng2FittextDirective;
   let elMock: ElementRef;
-  let rendererMock: Renderer2;
 
   beforeEach(() => {
     elMock = {} as ElementRef;
-    rendererMock = {} as Renderer2;
-    ng2FittextDirective = new Ng2FittextDirective(elMock, rendererMock);
+    ng2FittextDirective = new Ng2FittextDirective(elMock);
   });
 
   describe('Method: setFontSize', () => {

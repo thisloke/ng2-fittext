@@ -18,11 +18,13 @@ Check out the live demo: [ng2-fittext Demo](https://stackblitz.com/edit/stackbli
 
 ## Installation
 
-Install the library using npm:
+Install the library using npm according to your angular version (see table below):
 
-```bash
-npm install --save ng2-fittext
-```
+| Angular | ng2-fittext | command                       |
+|---------|-------------|-------------------------------|
+| <= v17  | 1.4.3       | ```npm i ng2-fittext@1.4.3``` |
+| >= v18  | 2.0.0       | ``` npm i ng2-fittext@1.5.0```|
+
 
 ### Usage
 
