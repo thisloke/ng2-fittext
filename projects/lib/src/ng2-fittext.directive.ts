@@ -9,7 +9,6 @@ import {
   EventEmitter,
   OnChanges,
   OnInit,
-  Renderer2,
 } from '@angular/core';
 
 @Directive({
@@ -35,7 +34,7 @@ export class Ng2FittextDirective
   private speed = 1.05;
   private done = false;
 
-  constructor(public el: ElementRef<HTMLElement>, public renderer: Renderer2) {}
+  constructor(public el: ElementRef<HTMLElement>) {}
 
   setFontSize(fontSize: number): void {
     if (this.isVisible() && !this.isDone()) {
