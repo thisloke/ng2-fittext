@@ -5,7 +5,7 @@
 <p align="center">An Angular 2+ directive, written in pure TypeScript (without jQuery!), to automatically scale the font size of an element so that it fits within its parent container.</p>
 
 [![Download via NPM](https://img.shields.io/npm/v/ng2-fittext.svg)](https://www.npmjs.com/package/ng2-fittext)
-![Angular](https://img.shields.io/badge/Angular-17-green.svg)
+![Angular](https://img.shields.io/badge/Angular-18-green.svg)
 ![Build Status](https://github.com/thisloke/ng2-fittext/actions/workflows/tests.yml/badge.svg)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
