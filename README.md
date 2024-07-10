@@ -23,7 +23,7 @@ Install the library using npm according to your angular version (see table below
 | Angular | ng2-fittext | command                       |
 |---------|-------------|-------------------------------|
 | <= v17  | 1.4.3       | ```npm i ng2-fittext@1.4.3``` |
-| >= v18  | 2.0.0       | ``` npm i ng2-fittext@1.5.0```|
+| >= v18  | 2.0.0       | ```npm i ng2-fittext@2.0.0``` |
 
 
 ### Usage
