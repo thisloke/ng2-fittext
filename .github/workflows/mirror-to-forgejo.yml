@@ -1,0 +1,21 @@
+name: Mirror to Forgejo
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["**"]
+  delete:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Forgejo
+        run: |
+          git remote add forgejo https://loke:${{ secrets.FORGEJO_TOKEN }}@git.lorenzoiovino.com/loke/ng2-fittext.git
+          git push forgejo --all --force
+          git push forgejo --tags --force
